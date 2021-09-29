@@ -1,0 +1,5 @@
+#!/bin/bash
+
+printf "%s" $(uptime -p | sed 's/up//')
+
+exit

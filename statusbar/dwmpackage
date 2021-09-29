@@ -1,0 +1,5 @@
+#!/bin/bash
+
+printf " %s" $(xbps-query -l | wc -l)
+
+exit

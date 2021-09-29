@@ -1,0 +1,4 @@
+#!/bin/bash
+
+printf " %s" $(wpa_cli list_networks | grep CURRENT | awk '{print $2}')
+exit

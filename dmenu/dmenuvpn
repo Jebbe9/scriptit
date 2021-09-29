@@ -1,0 +1,12 @@
+#!/bin/bash
+
+choice=$(echo -e "Up\nDown\nNone" | rofi -dmenu -theme gruvbox-dark-soft)
+
+if [ "$choice"  = "Down" ]; then
+		wg-quick down mlvd-ch15
+elif [ "$choice"  = "Up" ]; then
+		wg-quick up mlvd-ch15
+elif [ "$choice" = "None" ]; then
+		exit
+fi
+exit

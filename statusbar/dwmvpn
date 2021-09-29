@@ -1,0 +1,10 @@
+#!/bin/bash
+
+vpnvaihtoehto="$(ip a | grep mlvd-ch15 | grep inet | wc -l)"
+
+if [ "$vpnvaihtoehto" = 1 ]; then
+		printf " %s" Mullvad
+else
+		printf " %s" None
+fi
+exit

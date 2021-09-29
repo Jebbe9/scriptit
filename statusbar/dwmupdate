@@ -1,0 +1,10 @@
+#!/bin/bash
+
+pakettinumero=$(xbps-install -nuM | wc -l)
+
+if [ "$pakettinumero" = 0 ]; then
+	printf " %s" -
+else
+	printf " %s" $(xbps-install -nuM | wc -l)
+exit
+fi

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+while true; do
+	VOLUME=$(dwmvolume) 
+	MEMORY=$(dwmmemory) 
+	VPN=$(dwmvpn) 
+	WIFI=$(dwmwifi) 
+	UPTIME=$(dwmuptime) 
+	DATE=$(dwmdate) 
+	DOWNLOAD=$(dwmdownload) 
+	UPLOAD=$(dwmupload) 
+	PACKAGE=$(dwmpackage) 
+	VOLUME=$(dwmvolume) 
+	RAM=$(dwmram) 
+	xsetroot -name "$RAM | $MEMORY | $PACKAGE | $VOLUME | $DOWNLOAD  $UPLOAD | $WIFI | $VPN | $DATE " 
+	sleep 1s 
+done &
