@@ -1,0 +1,11 @@
+#!/bin/bash
+
+read -p "Miten sun päivä on mennyt? " LOG
+
+[ -d "/home/jere/Documents/cli-diary/$(date '+%D')" ] && echo "$LOG" >> /home/jere/Documents/cli-diary/$(date '+%D') && exit || echo "Tehdään uutta päivämäärää..." && mkdir /home/jere/Documents/cli-diary/$(date '+%D') && echo "$LOG" >> /home/jere/Documents/cli-diary/$(date '+%D') && exit
+
+#if [ -n "$LOG" ]; then
+#	echo "Kiva kuulla... Kirjoitanpa ylös...." && echo -e "\n$(date '+%D %H:%M')\n$LOG" >> /home/jere/Documents/toteamuksia && exit
+#else
+#	echo "Et kirjoittanut mitään..." && exit
+#fi
