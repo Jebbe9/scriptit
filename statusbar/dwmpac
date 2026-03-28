@@ -1,0 +1,11 @@
+#!/bin/bash
+
+while true; do
+  update_count=$(checkupdates | wc -l)
+  if [ "$update_count" -gt 0 ]; then
+    echo "󰣇  $update_count"
+  else
+    echo "No updates"
+  fi
+  sleep 900
+done
